@@ -11,7 +11,7 @@ resource "aws_instance" "myinstance" {
     encrypted             = true   # Ensure encryption is enabled
 
   }
-  # Enable IMDSv2 and disable IMDSv1
+ 
   metadata_options {
     http_tokens = "required"         # Enforces the use of IMDSv2
     http_put_response_hop_limit = 1  # Limits the number of network hops
